@@ -3,14 +3,11 @@
  */
 package org.ynov.info.b1.LaboJpa.model;
 
-import java.util.List;
-
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,7 +21,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Avatar {
+public class Equipement {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,9 +29,9 @@ public class Avatar {
 
 	private String name;
 
-	private int credits;
+	private int lvl;
 
-	@OneToMany(mappedBy = "avatar", fetch = FetchType.EAGER)
-	private List<Equipement> equipement;
+	@ManyToOne
+	private Avatar avatar;
 
 }
