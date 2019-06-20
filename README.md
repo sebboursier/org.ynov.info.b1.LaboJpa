@@ -31,6 +31,12 @@ Le resultat devrait être le suivant :
 
 ### TP
 
-1. Dans le package **model**, implémenter le MCD suivant :
+1. Dans le package **model**, implémenter le MCD suivant (Verifier l'ajout des Tables SQL via SQL Workbench ou équivalent):
 
-![MCD]()
+![MCD](https://github.com/sebboursier/org.ynov.info.b1.LaboJpa/raw/master/MCD.png)
+
+2. Dans le package **repository**, créer les interfaces manquantes.
+
+3. Depuis PostMan, Ajouter des Avatars, des Equipements et des Missions (le nom entier de la techno est **spring data rest**) (Verifier leur ajout via SQL Workbench ou équivalent).
+
+4. Modifier la fonction **ExpeditionBoardController.sheduleExpedition**, pour qu'elle ajoute une Expedition, seulement si le niveau d'équipement est suffisant.
